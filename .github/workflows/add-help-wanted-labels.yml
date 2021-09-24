@@ -1,0 +1,17 @@
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0,5,10,15,20,25,30,35,40,45,50,55 * * * *'
+
+jobs:
+  add_help_wanted_labels:
+    runs-on: ubuntu-latest
+    name: Add help wanted labels
+    steps:
+      - name: Add help wanted labels
+        uses: r-sierra/add-label-to-cards@v2
+        id: add-help-wanted-labels
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          label_to_add: 'Help Wanted'
+          column_name: 'To do'
