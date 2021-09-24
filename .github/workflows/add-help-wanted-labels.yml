@@ -1,7 +1,7 @@
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0,5,10,15,20,25,30,35,40,45,50,55 * * * *'
+    - cron:  '0/5 * * * *'
 
 jobs:
   add_help_wanted_labels:
