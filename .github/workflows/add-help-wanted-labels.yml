@@ -13,5 +13,6 @@ jobs:
         id: add-help-wanted-labels
         with:
           token: ${{secrets.GITHUB_TOKEN}}
+          project_id: 1
           label_to_add: 'Help Wanted'
           column_name: 'To do'
