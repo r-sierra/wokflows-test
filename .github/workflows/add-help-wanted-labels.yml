@@ -9,7 +9,7 @@ jobs:
     name: Add help wanted labels
     steps:
       - name: Add help wanted labels
-        uses: r-sierra/add-label-to-cards@v2
+        uses: r-sierra/add-label-to-cards-2@v2
         id: add-help-wanted-labels
         with:
           token: ${{secrets.GITHUB_TOKEN}}
